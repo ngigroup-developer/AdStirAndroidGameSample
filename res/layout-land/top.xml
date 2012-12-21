@@ -4,18 +4,12 @@
     android:layout_height="fill_parent"
     android:orientation="horizontal" >
 
-    <FrameLayout
-        android:layout_width="0dip"
-        android:layout_height="fill_parent"
-        android:layout_weight="1" >
-
-        <com.ad_stir.AdstirView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            media="MEDIA-ID"
-            spot="SPOT-NO" />
-    </FrameLayout>
+	<FrameLayout
+		android:layout_width="0dip"
+		android:layout_height="fill_parent"
+       	android:layout_weight="1">
+		<include layout="@layout/ad"/>
+	</FrameLayout>
 
     <ImageView
         android:id="@+id/start"

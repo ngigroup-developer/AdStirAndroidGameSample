@@ -23,6 +23,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnKeyListener;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -174,9 +175,9 @@ public class PlaySampleActivity extends Activity implements SensorEventListener 
 	protected void onDestroy() {
 		super.onDestroy();
 
-		// onDestroy()にここから
+		// onDestroy() Code
 		AdstirTerminate.init(this);
-		// ここまでを追加
+		// onDestroy() Code
 	}
 
 	@Override
@@ -189,8 +190,8 @@ public class PlaySampleActivity extends Activity implements SensorEventListener 
 	}
 
 	private void showDialog() {
-		AdstirView ad = new AdstirView(this, "MEDIA-ID", SPOT-NO);
 		pause = true;
+		View ad = this.getLayoutInflater().inflate(R.layout.ad, null);
 		new AlertDialog.Builder(this).setTitle("Pause").setCancelable(true).setView(ad)
 				.setPositiveButton("Continue", new DialogInterface.OnClickListener() {
 					@Override
@@ -206,9 +207,21 @@ public class PlaySampleActivity extends Activity implements SensorEventListener 
 				}).setOnCancelListener(new DialogInterface.OnCancelListener() {
 					@Override
 					public void onCancel(DialogInterface dialog) {
-						PlaySampleActivity.this.finish();
+						pause = false;
 					}
-				}).create().show();
+				}).setOnKeyListener(new OnKeyListener() {
+		            @Override
+		            public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
+		                android.util.Log.d("",""+keyCode);
+		                switch (keyCode) {
+		                case KeyEvent.KEYCODE_BACK:
+							PlaySampleActivity.this.finish();
+		                    return true;
+		                default:
+		                    return false;
+		                }
+		            }
+		        }).create().show();
 	}
 
 }

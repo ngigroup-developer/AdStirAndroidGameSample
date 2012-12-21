@@ -19,26 +19,28 @@
 	android:versionCode="1"
 	android:versionName="1.0" >
 
-	<uses-sdk android:minSdkVersion="7" android:targetSdkVersion="7" />
+	<uses-sdk
+		android:minSdkVersion="7"
+		android:targetSdkVersion="7" />
 
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 	<application
 		android:icon="@drawable/ic_launcher"
-		android:label="@string/main_name" >
-		
+		android:label="@string/play_name" >
 		<activity
 			android:name=".TopSampleActivity"
-			android:label="@string/main_name">
+			android:label="@string/play_name" >
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
 		<activity
-			android:name="com.ad_stir.sample.game.game.PlaySampleActivity"
-			android:label="@string/play_name"  android:screenOrientation="portrait"/>
+			android:name=".PlaySampleActivity"
+			android:label="@string/play_name"
+			android:screenOrientation="portrait" />
 	</application>
 
 </manifest>

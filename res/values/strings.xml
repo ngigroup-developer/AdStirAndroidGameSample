@@ -16,8 +16,5 @@
    limitations under the License.
 -->
 
-    <string name="adstir_sample">AdStir Sample App.</string>
-    <string name="main_name">AdStir Sample</string>
     <string name="play_name">AdStir Game Sample</string>
-
 </resources>

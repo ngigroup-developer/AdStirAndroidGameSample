@@ -1,4 +1,4 @@
-AdStir Android App Sample
+AdStir Android Game App Sample
 =========================
 
 (http://wiki.ad-stir.com/)

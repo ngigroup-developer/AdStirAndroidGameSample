@@ -45,9 +45,9 @@ public class TopSampleActivity extends Activity {
 	protected void onDestroy() {
 		super.onDestroy();
 
-		// onDestroy()にここから
+		// onDestroy() Code
 		AdstirTerminate.init(this);
-		// ここまでを追加
+		// onDestroy() Code
 	}
 
 }
