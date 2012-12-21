@@ -3,6 +3,8 @@ AdStir Android Game App Sample
 
 (http://wiki.ad-stir.com/)
 
+License
+----------------
 
    Copyright 2012 motionBEAT Inc.
 
@@ -17,4 +19,10 @@ AdStir Android Game App Sample
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+
+Usage
+----------------
+Rewrite res/layout/ad.xml
+
 
