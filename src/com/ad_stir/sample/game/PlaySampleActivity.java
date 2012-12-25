@@ -181,12 +181,12 @@ public class PlaySampleActivity extends Activity implements SensorEventListener 
 	}
 
 	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
+	public boolean onKeyUp(int keyCode, KeyEvent event) {
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
 			showDialog();
 			return false;
 		}
-		return super.onKeyDown(keyCode, event);
+		return super.onKeyUp(keyCode, event);
 	}
 
 	private void showDialog() {
@@ -212,7 +212,6 @@ public class PlaySampleActivity extends Activity implements SensorEventListener 
 				}).setOnKeyListener(new OnKeyListener() {
 		            @Override
 		            public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
-		                android.util.Log.d("",""+keyCode);
 		                switch (keyCode) {
 		                case KeyEvent.KEYCODE_BACK:
 							PlaySampleActivity.this.finish();
