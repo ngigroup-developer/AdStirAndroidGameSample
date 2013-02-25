@@ -112,7 +112,7 @@ public class PlaySampleActivity extends Activity implements SensorEventListener 
 				private static final long FPS = 20;
 				private static final long INTERVAL = 1000 / FPS;
 				private static final float FRICTION = 2.0f / FPS;
-				private static final float SPEED = 4.0f;
+				private static final float LENGTH = 4.0f; // 4px = 1m
 				private static final float BALL = 10.0f;
 				private float x = 0;
 				private float y = 0;
@@ -130,11 +130,13 @@ public class PlaySampleActivity extends Activity implements SensorEventListener 
 						}
 						if(!running)return;
 						if(pause)continue;
-						
-						speedX = speedX + ((sensorX - (FRICTION * speedX * Math.abs(speedX))) / FPS);
-						speedY = speedY + ((sensorY - (FRICTION * speedY * Math.abs(speedY))) / FPS);
-						x = x + (speedX * SPEED);
-						y = y + (speedY * SPEED);
+
+						speedX = speedX - (FRICTION * speedX * Math.abs(speedX)) / FPS; // friction
+						speedX = speedX + sensorX / FPS; // gravity
+						speedY = speedY - (FRICTION * speedY * Math.abs(speedY)) / FPS; // friction
+						speedY = speedY + sensorY / FPS; // gravity
+						x = x + (speedX * LENGTH);
+						y = y + (speedY * LENGTH);
 						if(x < 0){x = 0;speedX=-speedX;}
 						if(y < 0){y = 0;speedY=-speedY;}
 						if(holder.getSurfaceFrame().width() < x){x = holder.getSurfaceFrame().width();speedX=-speedX;}
