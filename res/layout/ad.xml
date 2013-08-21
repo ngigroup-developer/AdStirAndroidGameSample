@@ -24,7 +24,7 @@
 		android:layout_height="250dip"
 		android:layout_gravity="center" >
 
-		<com.ad_stir.AdstirView
+		<com.ad_stir.webview.AdstirWebView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="center"

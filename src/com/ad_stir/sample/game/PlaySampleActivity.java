@@ -16,9 +16,6 @@
 
 package com.ad_stir.sample.game;
 
-import com.ad_stir.AdstirTerminate;
-import com.ad_stir.AdstirView;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -173,14 +170,6 @@ public class PlaySampleActivity extends Activity implements SensorEventListener 
 
 	};
 
-	@Override
-	protected void onDestroy() {
-		super.onDestroy();
-
-		// onDestroy() Code
-		AdstirTerminate.init(this);
-		// onDestroy() Code
-	}
 
 	@Override
 	public boolean onKeyUp(int keyCode, KeyEvent event) {

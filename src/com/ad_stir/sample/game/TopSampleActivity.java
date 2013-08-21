@@ -22,8 +22,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-import com.ad_stir.AdstirTerminate;
-
 public class TopSampleActivity extends Activity {
 
 	@Override
@@ -44,10 +42,6 @@ public class TopSampleActivity extends Activity {
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-
-		// onDestroy() Code
-		AdstirTerminate.init(this);
-		// onDestroy() Code
 	}
 
 }
