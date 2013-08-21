@@ -24,7 +24,7 @@ License
 
 Usage
 ----------------
-1. Copy AdStir SDK in libs directory
+1. Copy adstirwebview.jar in libs directory
 2. Edit res/layout/ad.xml
  * MEDIA-ID and SPOT-NO
 
