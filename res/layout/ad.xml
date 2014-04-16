@@ -20,16 +20,17 @@
 	android:layout_gravity="center" >
 
 	<FrameLayout
-		android:layout_width="320dip"
+		android:layout_width="300dip"
 		android:layout_height="250dip"
 		android:layout_gravity="center" >
 
-		<com.ad_stir.webview.AdstirWebView
+		<com.ad_stir.webview.AdstirMraidView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="center"
 			media="MEDIA-ID"
-			spot="SPOT-NO" />
+			spot="SPOT-NO"
+			adsize="300,250" />
 	</FrameLayout>
 
 </FrameLayout>
