@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-   Copyright 2012-2013 UNITED, inc.
+   Copyright 2012-2015 UNITED, inc.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -20,13 +20,14 @@
 	android:versionName="1.0" >
 
 	<uses-sdk
-		android:minSdkVersion="7"
-		android:targetSdkVersion="7" />
+		android:minSdkVersion="10"
+		android:targetSdkVersion="22" />
 
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 	<application
+	    android:allowBackup="true"
 		android:icon="@drawable/ic_launcher"
 		android:label="@string/play_name" >
 		<activity

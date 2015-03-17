@@ -8,7 +8,7 @@ AdStir Developer's Guide
 
 License
 ----------------
-    Copyright 2012-2013 UNITED, inc.
+    Copyright 2012-2015 UNITED, inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -25,7 +25,8 @@ License
 Usage
 ----------------
 1. Copy adstirwebview.jar in libs directory
-2. Edit res/layout/ad.xml
+2. Import Google Play services and add to Project's Library
+3. Edit res/layout/ad.xml
  * MEDIA-ID and SPOT-NO
 
 
